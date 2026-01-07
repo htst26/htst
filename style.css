@@ -8,7 +8,7 @@ body {
 }
 
 header {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://quangbinhtravel.vn/wp-content/uploads/2025/02/thanh-co-quang-tri-2-1024x576.jpg');
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("img/main.jpg");
     background-size: cover;
     background-position: center;
     color: white;
