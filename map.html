@@ -1,83 +1,134 @@
 <!doctype html>
 <html lang="vi">
-	<head>
-		<meta charset="UTF-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
-		<title>Thành Cổ Quảng Trị - Bản Đồ</title>
-		<link
-			rel="stylesheet"
-			href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-		<link rel="stylesheet" href="style.css" />
-	</head>
-	<body>
-		<header>
-			<h1>Thành Cổ Quảng Trị</h1>
-		</header>
 
-		<nav>
-			<a href="index.html">Giới Thiệu</a>
-			<a href="map.html">Bản Đồ Tương Tác</a>
-			<a href="cong.html">Bốn Cổng Thành</a>
-			<a href="hao.html">Hào Nước & Pháo Đài</a>
-			<a href="trungtam.html">Khu Trung Tâm</a>
-			<a href="tranchien.html">Trận Chiến 81 Ngày Đêm</a>
-			<a href="gallery.html">Thư viện ảnh</a>
-		</nav>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+	<title>Thành Cổ Quảng Trị - Bản Đồ</title>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+	<link rel="stylesheet" href="style.css" />
+	<link rel="icon" type="image/png" sizes="192x192" href="/icon.png" />
+</head>
 
-		<section>
-			<h2>Bản Đồ Tương Tác Thành Cổ Quảng Trị</h2>
-			<p class="info">&emsp;Zoom, kéo và click vào các điểm để khám phá.</p>
-			<div id="map"></div>
-		</section>
+<body>
+	<header>
+		<h1>Thành Cổ Quảng Trị</h1>
+	</header>
 
-		<footer>
-			<p class="cen">
-				Dữ liệu 3D gốc được hỗ trợ chuyên môn bởi Công ty TNHH Onflow Vietnam
-			</p>
-			<p class="cen">Nhóm học sinh A3K4 trường THCS Chu Văn An - Long Biên</p>
-		</footer>
+	<nav>
+		<a href="index.html">Giới Thiệu</a>
+		<a href="map.html">Bản Đồ Tương Tác</a>
+		<a href="cong.html">Bốn Cổng Thành</a>
+		<a href="hao.html">Hào Nước & Pháo Đài</a>
+		<a href="trungtam.html">Khu Trung Tâm</a>
+		<a href="tranchien.html">Trận Chiến 81 Ngày Đêm</a>
+		<a href="gallery.html">Thư viện ảnh</a>
+	</nav>
 
-		<link
-			rel="stylesheet"
-			href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-		<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-		<div id="map" style="height: 500px; width: 100%"></div>
-		<script>
-			var map = L.map("map").setView([16.75388, 107.18951], 17);
-			L.tileLayer(
-				"https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
-				{
-					attribution:
-						"Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community",
-				}
-			).addTo(map);
-			L.marker([16.75388, 107.18951])
-				.addTo(map)
-				.bindPopup(
-					'<b><a class="touch" href="trungtam.html">Đài Tưởng Niệm Trung Tâm</a></b>'
-				);
-			L.marker([16.752238, 107.189])
-				.addTo(map)
-				.bindPopup(
-					'<b><a class="touch" href="cong.html#h">Cổng Tiền (phía Nam)</a></b>'
-				);
-			L.marker([16.75555, 107.18999])
-				.addTo(map)
-				.bindPopup(
-					'<b><a class="touch" href="cong.html#hh">Cổng Hậu (phía Bắc)</a></b>'
-				);
-			L.marker([16.753338, 107.19127])
-				.addTo(map)
-				.bindPopup(
-					'<b><a class="touch" href="cong.html#hhh">Cổng Hữu (phía Đông)</a></b>'
-				);
-			L.marker([16.75439, 107.18775])
-				.addTo(map)
-				.bindPopup(
-					'<b><a class="touch" href="cong.html#hhhh">Cổng Tả (phía Tây)</a></b>'
-				);
-		</script>
-	</body>
+	<section>
+		<h2>Bản Đồ Tương Tác Thành Cổ Quảng Trị</h2>
+		<p class="info">&emsp;Zoom, kéo và click vào các điểm để khám phá.</p>
+		<div id="map"></div>
+	</section>
+
+	<footer>
+		<p class="cen">
+			Dữ liệu 3D gốc được hỗ trợ chuyên môn bởi Công ty TNHH Onflow Vietnam
+		</p>
+		<p class="cen">Nhóm học sinh A3K4 trường THCS Chu Văn An - Long Biên</p>
+	</footer>
+
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+	<div id="map" style="height: 500px; width: 100%"></div>
+	<script>
+		var map = L.map("map").setView([16.75388, 107.18951], 17);
+		L.tileLayer(
+			"https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}", {
+			attribution: "Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community",
+		}
+		).addTo(map);
+		var hao1 = L.polygon([
+			[16.754455, 107.187405],
+			[16.75232, 107.18657],
+			[16.751867, 107.18885],
+			[16.751, 107.19115],
+			[16.753245, 107.19158],
+			[16.75334, 107.19124],
+			[16.75226, 107.1909],
+			[16.752143, 107.19118],
+			[16.7512, 107.191],
+			[16.75157, 107.1901],
+			[16.75185, 107.19015],
+			[16.75252, 107.18779],
+			[16.752245, 107.18763],
+			[16.75243, 107.1867],
+			[16.7533, 107.18708],
+			[16.75327, 107.18736],
+			[16.75437, 107.1877]
+		], {
+			color: 'blue', //red for debug blue for usage
+			weight: 3,
+			opacity: 0.7,
+			fillColor: '#277dc6',
+			fillOpacity: 0.4
+		}).addTo(map).bindPopup(
+			'<b><a class="touch" href="hao.html#hn">Hào Nước</a></b>'
+		);
+		var hao2 = L.polygon([
+			[16.7545235, 107.187433],
+			[16.756832, 107.187913],
+			[16.75591, 107.19013],
+			[16.755499, 107.19249],
+			[16.75333, 107.19159],
+			[16.75345, 107.191275],
+			[16.75449, 107.1916],
+			[16.754477, 107.191884],
+			[16.755345, 107.192279],
+			[16.755515, 107.1913],
+			[16.75526, 107.19118],
+			[16.75594, 107.18883],
+			[16.756193, 107.188865],
+			[16.7566, 107.18797],
+			[16.75565, 107.18779],
+			[16.755535, 107.18808],
+			[16.75443, 107.187718]
+		], {
+			color: 'blue', //red for debug blue for usage
+			weight: 3,
+			opacity: 0.7,
+			fillColor: '#277dc6',
+			fillOpacity: 0.4
+		}).addTo(map).bindPopup(
+			'<b><a class="touch" href="hao.html#hn">Hào Nước</a></b>'
+		);
+		L.marker([16.75388, 107.18951])
+			.addTo(map)
+			.bindPopup(
+				'<b><a class="touch" href="trungtam.html">Đài Tưởng Niệm Trung Tâm</a></b>'
+			);
+		L.marker([16.752238, 107.189])
+			.addTo(map)
+			.bindPopup(
+				'<b><a class="touch" href="cong.html#h">Cổng Tiền (phía Nam)</a></b>'
+			);
+		L.marker([16.75555, 107.18999])
+			.addTo(map)
+			.bindPopup(
+				'<b><a class="touch" href="cong.html#hh">Cổng Hậu (phía Bắc)</a></b>'
+			);
+		L.marker([16.753338, 107.19127])
+			.addTo(map)
+			.bindPopup(
+				'<b><a class="touch" href="cong.html#hhh">Cổng Hữu (phía Đông)</a></b>'
+			);
+		L.marker([16.75439, 107.18775])
+			.addTo(map)
+			.bindPopup(
+				'<b><a class="touch" href="cong.html#hhhh">Cổng Tả (phía Tây)</a></b>'
+			);
+	</script>
+</body>
+
 </html>
